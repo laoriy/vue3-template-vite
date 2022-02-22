@@ -1,0 +1,49 @@
+/* app base var */
+/* body */
+@font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial,
+    sans-serif;
+@font-size-base: 14px;
+@line-height-base: 1.5;
+@text-color: #515a6e;
+@body-background: #fff;
+@code-family: monospace, sans-serif;
+
+/* link */
+@link-color: #2d8cf0;
+@transition-time: 0.2s;
+@link-hover-color: #57a3f3;
+@link-active-color: #2b85e4;
+
+/* cursor */
+@cursor-disabled: not-allowed;
+
+/* app layout var */
+@menuText: #909399;
+@menuActiveText: #fff;
+@menuHoverText: #fff;
+@subMenuActiveText: #fff;
+@subMenuHoverText: #fff;
+
+@menuBg: #121a31;
+
+@menuHover: #121a31;
+@menuActive: #707eff;
+
+@subMenuBg: #121a31;
+@subMenuHover: #707eff;
+
+@sideBarWidth: 256px;
+@sidebarFoldWidth: 54px;
+@navbarHeight: 64px;
+@breadcrumbHeight: 44px;
+@menu-left: 20px;
+
+// more detail: see css module
+:export {
+    menuText: @menuText;
+    menuBg: @menuBg;
+    menuActiveText: @menuActiveText;
+    sideBarWidth: @sideBarWidth;
+    sidebarFoldWidth: @sidebarFoldWidth;
+    navbarHeight: @navbarHeight;
+}

@@ -1,0 +1,36 @@
+/* error page */
+.logo-size(@w, @h) {
+  width: @w;
+  height: @h;
+}
+
+.layout-size(@h) {
+  margin: calc(calc(100vh - @h - @navbarHeight) / 2) auto 0;
+}
+
+.app-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .layout-size(512px);
+
+  .error-logo {
+      .logo-size(665px, 512px);
+  }
+
+  .error-container {
+      margin-left: 15%;
+
+      .error-title {
+          font-size: 60px;
+      }
+
+      .error-content {
+          margin-bottom: 15px;
+          font-size: 20px;
+          line-height: 28px;
+          color: rgba(0, 0, 0, 0.45);
+      }
+  }
+}
