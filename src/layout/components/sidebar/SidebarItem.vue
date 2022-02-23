@@ -2,6 +2,7 @@
 // import path from 'path';
 import { isExternal } from '@/utils/validate';
 import { ref } from 'vue';
+import SvgIcon from '@/components/svg-icon/index.vue';
 import ItemCell from './SidebarItemCell.vue';
 import AppLink from './SidebarLink.vue';
 
@@ -77,11 +78,7 @@ const getIcon = (item: PlianObj) => onlyOneChild.value.meta.icon || (item.meta &
                     :index="resolvePath(onlyOneChild.path)"
                     :class="{ 'submenu-title-noDropdown': !isNest }"
                 >
-                    <svg-icon
-                        v-if="getIcon(item)"
-                        class="menu-icon"
-                        :type="getIcon(item)"
-                    ></svg-icon>
+                    <SvgIcon v-if="getIcon(item)" class="menu-icon" :type="getIcon(item)"></SvgIcon>
                     <!-- <i v-if="getIcon(item)" :class="`iconfont menu-icon ${getIcon(item)}`"></i> -->
                     <template v-if="onlyOneChild.meta.title" #title>
                         <span class="title" :class="getIcon(item) ? '' : 'single-txt'">

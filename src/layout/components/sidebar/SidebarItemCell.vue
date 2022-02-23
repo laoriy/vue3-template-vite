@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SvgIcon from '@/components/svg-icon/index.vue';
+
 defineProps({
     icon: {
         type: String,
@@ -12,7 +14,7 @@ defineProps({
 </script>
 
 <template>
-    <svg-icon v-if="icon" class="menu-icon" :type="icon"></svg-icon>
+    <SvgIcon v-if="icon" class="menu-icon" :type="icon"></SvgIcon>
     <span v-if="title" :class="icon ? '' : 'single-txt'">
         {{ title }}
     </span>

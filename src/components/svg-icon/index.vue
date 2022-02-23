@@ -8,6 +8,14 @@ export default defineComponent({
             type: String,
             required: true,
         },
+        size: {
+            type: Number,
+            default: 16,
+        },
+        color: {
+            type: String,
+            default: 'inherit',
+        },
     },
     setup(props) {
         // #aqara-icon- 需要和vite.config.ts中的createSvgIconsPlugin配置的symbolId一致
@@ -16,7 +24,7 @@ export default defineComponent({
     },
     render() {
         return (
-            <el-icon attrs={this.$attrs}>
+            <el-icon attrs={this.$attrs} color={this.color} size={this.size}>
                 <svg aria-hidden="true">
                     <use xlinkHref={this.symbolId} />
                 </svg>
@@ -25,12 +33,3 @@ export default defineComponent({
     },
 });
 </script>
-
-<style scoped>
-.svg-icon {
-    width: 1em;
-    height: 1em;
-    fill: currentColor;
-    overflow: hidden;
-}
-</style>
