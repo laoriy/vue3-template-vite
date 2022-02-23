@@ -96,7 +96,7 @@ const handleHasAccessMenus = (to: RouteLocationNormalized, next: NavigationGuard
 
 // router interceptor
 const routerInterceptor = function routerJumpInterceptor(router: Router) {
-    router.beforeEach(async (to, _from, next) => {
+    router.beforeEach((to, _from, next) => {
         // set page title
         document.title = getPageTitle(to.meta.title as string);
         const hasToken = getToken();
@@ -104,7 +104,7 @@ const routerInterceptor = function routerJumpInterceptor(router: Router) {
         if (whiteList.indexOf(to.path) !== -1) {
             next();
         } else if (hasToken) {
-            isProEnv && sensors && sensors.login(hasToken);
+            isProEnv && window.sensors && window.sensors.login(hasToken);
 
             const hasMenus = store.getters.menus?.length > 0;
             !hasMenus && generateAccessMenus(router, to, next);

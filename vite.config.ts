@@ -8,10 +8,10 @@ import AutoImport from 'unplugin-auto-import/vite'; // elementPlus按需引入 h
 import Components from 'unplugin-vue-components/vite';
 import ElementPlus from 'unplugin-element-plus/vite';
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-import svgLoader from 'vite-svg-loader'; // 将svg转换为vue组件 https://github.com/jpkleemans/vite-svg-loader
 import { visualizer } from 'rollup-plugin-visualizer';
 import viteCompression from 'vite-plugin-compression';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 function resolve(dir: string) {
     return path.join(__dirname, dir);
@@ -23,21 +23,24 @@ const assetReg = {
 } as { [key: string]: RegExp };
 
 const plugins: PluginOption[] = [];
+/**
+ * @todo cdn暂时不支持
+ */
 const CDN = {
     css: [] as string[],
     js: [
-        'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-3.2.31.global.prod.js',
-        'https://cdn.aqara.com/cdn/common/mainland/static/js/vuex-4.0.2.global.prod.js',
-        'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-router-4.0.12.global.prod.js',
-        'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-i18n-9.1.9.global.prod.js',
-        'https://cdn.aqara.com/cdn/common/mainland/static/js/axios-0.26.0.min.js',
-    ],
+        // 'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-3.2.31.global.prod.js',
+        // 'https://cdn.aqara.com/cdn/common/mainland/static/js/vuex-4.0.2.global.prod.js',
+        // 'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-router-4.0.12.global.prod.js',
+        // 'https://cdn.aqara.com/cdn/common/mainland/static/js/vue-i18n-9.1.9.global.prod.js',
+        // 'https://cdn.aqara.com/cdn/common/mainland/static/js/axios-0.26.0.min.js',
+    ] as string[],
     externals: {
-        vue: 'Vue',
-        vuex: 'Vuex',
-        axios: 'axios',
-        'vue-router': 'VueRouter',
-        'vue-i18n': 'VueI18n',
+        // vue: 'Vue',
+        // vuex: 'Vuex',
+        // axios: 'axios',
+        // 'vue-router': 'VueRouter',
+        // 'vue-i18n': 'VueI18n',
     },
 };
 // https://vitejs.dev/config/
@@ -49,9 +52,9 @@ export default ({ mode }: ConfigEnv) => {
 
     const proxyBase = envs.VITE_APP_PROXY_BASE;
 
-    const jsInjects = CDN.js.map(
-        (jsCdn) => `<script type="text/JavaScript" src="${jsCdn}"></script>`
-    );
+    const injectScript = CDN.js
+        .map((jsCdn) => `<script type="text/JavaScript" src="${jsCdn}"></script>`)
+        .join('');
     /**
      * 生产环境需要进行压缩，删除console等操作
      */
@@ -84,8 +87,8 @@ export default ({ mode }: ConfigEnv) => {
             createHtmlPlugin({
                 inject: {
                     data: {
-                        injectScript: isProEnv ? jsInjects : '',
-                        loadSensors: envs.VITE_APP_OPEN_SENSORS === 'on',
+                        injectScript: isProEnv ? injectScript : '',
+                        injectSensors: envs.VITE_APP_OPEN_SENSORS === 'on',
                     },
                 },
             }),
@@ -105,7 +108,12 @@ export default ({ mode }: ConfigEnv) => {
                 resolvers: [ElementPlusResolver()],
                 dirs: '', // 本地自定义的组件不通过该插件处理，所以将src/components 置位空
             }),
-            svgLoader(),
+            createSvgIconsPlugin({
+                // 指定需要缓存的图标文件夹
+                iconDirs: [resolve('src/assets/icons')],
+                // 指定symbolId格式
+                symbolId: 'aqara-icon-[dir]-[name]',
+            }),
             ...plugins,
         ],
         resolve: {
@@ -148,6 +156,7 @@ export default ({ mode }: ConfigEnv) => {
                         return `static/${assetName || '[ext]'}/[name]-[hash].[ext]`;
                     },
                     manualChunks: {
+                        vender: ['vue', 'vue-router', 'vuex', 'vue-i18n', 'axios'],
                         'element-plus': ['element-plus'],
                     },
                     globals: isProEnv ? CDN.externals : undefined,

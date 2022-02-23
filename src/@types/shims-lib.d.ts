@@ -1,2 +1,8 @@
 // 数据分析全局变量
-declare let sensors: any;
+declare global {
+    interface Window {
+        sensors: any;
+    }
+  }
+
+export {};

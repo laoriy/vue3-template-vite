@@ -1,4 +1,3 @@
-
 {
     // 编译选项
     "compilerOptions": {
@@ -36,12 +35,12 @@
         "noUnusedParameters": true,
         // 确保每个文件都可以安全地转译，而无需依赖其他导入。
         "isolatedModules":true,
-        // 模块名到基于 baseUrl的路径映射的列表,配合webpack的alias配置
+        // 要包含的类型声明文件名列表
         "types": [
             "vite/client",
             "element-plus/global"
         ],
-        // 要包含的类型声明文件名列表
+        // 模块名到基于 baseUrl的路径映射的列表,配合webpack的alias配置
         "paths": {
             "@/*": [
                 "src/*"

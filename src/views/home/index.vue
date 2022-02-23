@@ -6,9 +6,7 @@ import User from '@/components/header/User.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const isLogin = computed(() => {
-    return (getToken() || '').length > 0;
-});
+const isLogin = computed(() => (getToken() || '').length > 0);
 const toLogin = () => {
     goUcLogin();
 };

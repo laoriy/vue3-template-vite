@@ -19,7 +19,7 @@ const showLogo = computed(() => store.getters.settings.showSidebarLogo);
 const activeMenu = computed(() => {
     const { meta, path } = route;
     if (meta.activeMenu) {
-        return meta.activeMenu;
+        return meta.activeMenu as string;
     }
     return path;
 });
@@ -30,7 +30,6 @@ const isCollapse = computed(() => !sidebar.value.opened);
 <template>
     <div :class="{ 'has-logo': showLogo }">
         <Logo v-if="showLogo" :collapse="isCollapse" />
-        {{ activeMenu }}
         <el-scrollbar wrap-class="scrollbar-wrapper">
             <el-menu
                 :default-active="activeMenu"

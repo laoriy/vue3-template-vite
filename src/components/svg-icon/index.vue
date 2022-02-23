@@ -1,9 +1,6 @@
 <script lang="tsx">
-import { defineComponent } from 'vue';
-import * as icons from '@/assets/icons';
-/**
- * 内置一些全局的svg图标，同样使用el-icon进行包裹可以设置该组件的size,color 等
- */
+import { defineComponent, computed } from 'vue';
+
 export default defineComponent({
     name: 'SvgIcon',
     props: {
@@ -12,16 +9,19 @@ export default defineComponent({
             required: true,
         },
     },
+    setup(props) {
+        // #aqara-icon- 需要和vite.config.ts中的createSvgIconsPlugin配置的symbolId一致
+        const symbolId = computed(() => `#aqara-icon-${props.type}`);
+        return { symbolId };
+    },
     render() {
-        const Icon = (icons as Record<string, any>)[this.type];
-        if (Icon) {
-            return (
-                <el-icon attrs={this.$attrs}>
-                    <Icon />
-                </el-icon>
-            );
-        }
-        return null;
+        return (
+            <el-icon attrs={this.$attrs}>
+                <svg aria-hidden="true">
+                    <use xlinkHref={this.symbolId} />
+                </svg>
+            </el-icon>
+        );
     },
 });
 </script>

@@ -25,8 +25,6 @@ const buttonOperator = {
         mounted(el: HTMLElement, binding: DirectiveBinding) {
             const { value, instance } = binding;
             if (!instance?.$store.getters.hasOperator(value)) {
-                console.log(instance);
-
                 (el as PlianObj).disabled = true;
                 addClass(el, 'is-disabled');
             }
