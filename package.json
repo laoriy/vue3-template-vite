@@ -55,6 +55,8 @@
     "vite": "^2.8.3",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.0.6",
+    "vite-plugin-optimize-persist": "^0.1.2",
+    "vite-plugin-package-config": "^0.1.1",
     "vite-plugin-svg-icons": "^2.0.1",
     "vue-tsc": "^0.31.4"
   },
@@ -65,7 +67,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,vue,ts,tsx}": "vue-tsc --noEmit"
+    "src/**/*.{js,jsx,vue,ts,tsx}": "eslint --cache --fix"
   },
   "eslintIgnore": [
     "**/*.d.ts",
@@ -73,5 +75,40 @@
     "dist",
     "sensors.js",
     "index.html"
-  ]
+  ],
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "aqara-lib",
+        "axios",
+        "element-plus",
+        "element-plus/es",
+        "element-plus/es/components/avatar/style/css",
+        "element-plus/es/components/breadcrumb-item/style/css",
+        "element-plus/es/components/breadcrumb/style/css",
+        "element-plus/es/components/button/style/css",
+        "element-plus/es/components/config-provider/style/css",
+        "element-plus/es/components/date-picker/style/css",
+        "element-plus/es/components/dropdown-item/style/css",
+        "element-plus/es/components/dropdown-menu/style/css",
+        "element-plus/es/components/dropdown/style/css",
+        "element-plus/es/components/icon/style/css",
+        "element-plus/es/components/menu-item/style/css",
+        "element-plus/es/components/menu/style/css",
+        "element-plus/es/components/message/style/css",
+        "element-plus/es/components/scrollbar/style/css",
+        "element-plus/es/components/sub-menu/style/css",
+        "element-plus/lib/locale/lang/en",
+        "element-plus/lib/locale/lang/zh-cn",
+        "js-cookie",
+        "lodash-es",
+        "path-to-regexp",
+        "uc-lib",
+        "vue",
+        "vue-i18n",
+        "vue-router",
+        "vuex"
+      ]
+    }
+  }
 }

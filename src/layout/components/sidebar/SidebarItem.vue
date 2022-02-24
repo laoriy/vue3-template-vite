@@ -78,8 +78,11 @@ const getIcon = (item: PlianObj) => onlyOneChild.value.meta.icon || (item.meta &
                     :index="resolvePath(onlyOneChild.path)"
                     :class="{ 'submenu-title-noDropdown': !isNest }"
                 >
-                    <SvgIcon v-if="getIcon(item)" class="menu-icon" :type="getIcon(item)"></SvgIcon>
-                    <!-- <i v-if="getIcon(item)" :class="`iconfont menu-icon ${getIcon(item)}`"></i> -->
+                    <svg-icon
+                        v-if="getIcon(item)"
+                        class="menu-icon"
+                        :type="getIcon(item)"
+                    ></svg-icon>
                     <template v-if="onlyOneChild.meta.title" #title>
                         <span class="title" :class="getIcon(item) ? '' : 'single-txt'">
                             {{ onlyOneChild.meta.title }}

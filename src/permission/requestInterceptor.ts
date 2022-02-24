@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { goUcLogin, getRandomStr, getLang, locationOrigin } from 'uc-lib';
 import { ElMessage } from 'element-plus';
 
-const isProEnv = process.env.NODE_ENV === 'production';
+const isProEnv = import.meta.env.PROD;
 
 const requestInterceptor = function httpRequestInterceptor() {
     // 环境切换

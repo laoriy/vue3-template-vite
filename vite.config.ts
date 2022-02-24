@@ -12,6 +12,8 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import viteCompression from 'vite-plugin-compression';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import OptimizationPersist from 'vite-plugin-optimize-persist';
+import PkgConfig from 'vite-plugin-package-config';
 
 function resolve(dir: string) {
     return path.join(__dirname, dir);
@@ -79,6 +81,9 @@ export default ({ mode }: ConfigEnv) => {
                 })
             );
         }
+    } else {
+        plugins.push(PkgConfig());
+        plugins.push(OptimizationPersist());
     }
 
     return defineConfig({

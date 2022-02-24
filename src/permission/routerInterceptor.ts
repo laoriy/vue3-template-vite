@@ -14,7 +14,7 @@ import { ModulesNames, UserModule, PermissionModule } from '@/store/mutation-typ
 //     (to?: any): void;
 // }
 
-const isProEnv = process.env.NODE_ENV === 'production';
+const isProEnv = import.meta.env.PROD;
 
 // router whitelist
 // 带落地页admin统一路由path `/`为落地页
