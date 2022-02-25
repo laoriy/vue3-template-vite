@@ -16,7 +16,7 @@ export default <RouteTree[]>[
         index: 6,
         alwaysShow: true,
         meta: {
-            icon: 'nav_label',
+            icon: 'nav-label',
             title: '多级菜单子级隐藏',
         },
         children: [

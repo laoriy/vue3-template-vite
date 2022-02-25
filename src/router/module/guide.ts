@@ -18,7 +18,7 @@ export default <RouteTree[]>[
                 component: RouterGuide,
                 meta: {
                     title: '路由配置',
-                    icon: 'nav_label',
+                    icon: 'nav-label',
                 },
             },
         ],

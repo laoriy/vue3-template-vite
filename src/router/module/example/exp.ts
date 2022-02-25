@@ -16,7 +16,7 @@ export default <RouteTree[]>[
         alwaysShow: true,
         meta: {
             title: '元素权限',
-            icon: 'nav_label',
+            icon: 'nav-label',
         },
         children: [
             {
@@ -26,7 +26,7 @@ export default <RouteTree[]>[
                 component: Button,
                 meta: {
                     title: '按钮权限',
-                    icon: 'nav_label',
+                    icon: 'nav-label',
                     showBreadcrumb: false,
                 },
             },

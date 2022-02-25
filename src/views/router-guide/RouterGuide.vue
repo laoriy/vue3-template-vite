@@ -41,7 +41,7 @@
               path: 'https://www.aqara.com',
               meta: {
                 title: '外链菜单',
-                icon: 'nav_label'
+                icon: 'nav-label'
               }
             }
           ]
@@ -63,7 +63,7 @@
           alwaysShow: true,
           meta: {
             title: '元素权限',
-            icon: 'nav_label',
+            icon: 'nav-label',
           },
           children: [
             {
@@ -73,7 +73,7 @@
               component: Button,
               meta: {
                 title: '按钮权限',
-                icon: 'nav_label',
+                icon: 'nav-label',
                 showBreadcrumb: false
               }
             },

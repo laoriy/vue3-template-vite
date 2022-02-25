@@ -23,7 +23,7 @@ export default <RouteTree[]>[
                 component: Home,
                 meta: {
                     title: '一级菜单子级隐藏',
-                    icon: 'nav_label',
+                    icon: 'nav-label',
                 },
             },
             {

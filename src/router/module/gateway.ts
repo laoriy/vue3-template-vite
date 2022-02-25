@@ -15,7 +15,7 @@ export default <RouteTree[]>[
         alwaysShow: true,
         meta: {
             title: '网关管理',
-            icon: 'nav_label',
+            icon: 'nav-label',
         },
         children: [
             {

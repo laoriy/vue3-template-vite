@@ -18,7 +18,7 @@ export default <RouteTree[]>[
                 component: Statistic,
                 meta: {
                     title: '数据统计',
-                    icon: 'nav_label',
+                    icon: 'nav-label',
                 },
             },
         ],

@@ -20,7 +20,7 @@ export default <RouteTree[]>[
         alwaysShow: true,
         meta: {
             title: '多级嵌套菜单',
-            icon: 'nav_label',
+            icon: 'nav-label',
         },
         children: [
             {
@@ -32,7 +32,7 @@ export default <RouteTree[]>[
                 name: 'm-1',
                 meta: {
                     title: 'm-1',
-                    icon: 'nav_label',
+                    icon: 'nav-label',
                 },
                 children: [
                     {
@@ -42,7 +42,7 @@ export default <RouteTree[]>[
                         name: 'm-1-1',
                         meta: {
                             title: 'm-1-1',
-                            icon: 'nav_label',
+                            icon: 'nav-label',
                         },
                     },
                     {
@@ -54,7 +54,7 @@ export default <RouteTree[]>[
                         alwaysShow: true,
                         meta: {
                             title: 'm-1-2',
-                            icon: 'nav_label',
+                            icon: 'nav-label',
                         },
                         children: [
                             {
@@ -73,7 +73,7 @@ export default <RouteTree[]>[
                                 name: 'm-1-2-2',
                                 meta: {
                                     title: 'm-1-2-2',
-                                    icon: 'nav_label',
+                                    icon: 'nav-label',
                                 },
                             },
                         ],
