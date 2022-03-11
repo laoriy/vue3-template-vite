@@ -133,7 +133,7 @@ onMounted(() => {
     </el-breadcrumb>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 @normalColor: rgba(0, 0, 0, 0.45);
 
 .app-breadcrumb.el-breadcrumb {

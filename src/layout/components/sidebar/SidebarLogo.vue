@@ -31,7 +31,7 @@ const logo = computed(() => settings.value.sidebarLogoURL);
     </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .sidebarLogoFade-enter-active {
     transition: opacity 1.5s;
 }

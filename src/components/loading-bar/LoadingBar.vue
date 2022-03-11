@@ -71,7 +71,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .lv-loading-bar {
     width: 100%;
     position: fixed;
