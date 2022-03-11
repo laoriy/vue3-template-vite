@@ -16,7 +16,7 @@ const key = computed(() => route.path);
     </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .app-main {
     height: calc(100vh - @navbarHeight);
     width: 100%;

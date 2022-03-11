@@ -111,7 +111,7 @@
     </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .router-guide {
     padding: 30px;
 

@@ -13,18 +13,18 @@
             --el-button-disabled-border-color: #b8bfff;
         }
         &.is-plain.el-button--primary{
-            color: #a9b2ff;
-            background-color: #f1f2ff;
-            border-color: #e2e5ff;
+            color: #a9b2ff !important;
+            background-color: #f1f2ff !important;
+            border-color: #e2e5ff !important;
         }
         &.el-button--success{
             --el-button-disabled-bg-color: rgb(179, 225, 157);
             --el-button-disabled-border-color: rgb(179, 225, 157);
         }
         &.is-plain.el-button--success{
-            color: #88d7a7;
-            background-color: #ebf8f0;
-            border-color: #d7f2e2;
+            color: #88d7a7 !important;
+            background-color: #ebf8f0 !important;
+            border-color: #d7f2e2 !important;
         }
         &.el-button--info{
             --el-button-disabled-bg-color: rgb(200, 201, 204);
@@ -35,18 +35,18 @@
             --el-button-disabled-border-color: rgb(243, 209, 158);
         }
         &.is-plain.el-button--warning{
-            color: #febb94;
-            background-color: #fff4ed;
-            border-color: #ffe8db;
+            color: #febb94 !important;
+            background-color: #fff4ed !important;
+            border-color: #ffe8db !important;
         }
         &.el-button--danger{
             --el-button-disabled-bg-color: rgb(250, 182, 182);
             --el-button-disabled-border-color: rgb(250, 182, 182);
         }
         &.is-plain.el-button--danger{
-            color: #fe939a;
-            background-color: #ffedee;
-            border-color: #ffdbdd;
+            color: #fe939a !important;
+            background-color: #ffedee !important;
+            border-color: #ffdbdd !important;
         }
     } 
 }
@@ -86,10 +86,12 @@
 /*********** el-radio-button ************/
 .el-radio-button{
     &:first-child .el-radio-button__inner{
-        border-radius: var(--el-border-radius-custom) 0 0 var(--el-border-radius-custom) !important;
+        border-top-left-radius: var(--el-border-radius-custom)!important;
+        border-bottom-left-radius: var(--el-border-radius-custom)!important;
     }
     &:last-child .el-radio-button__inner{
-        border-radius: 0 var(--el-border-radius-custom) var(--el-border-radius-custom) 0 !important;
+        border-top-right-radius: var(--el-border-radius-custom)!important;
+        border-bottom-right-radius: var(--el-border-radius-custom)!important;
     }
 }
 

@@ -107,9 +107,11 @@ export default ({ mode }: ConfigEnv) => {
             }),
             ElementPlus(),
             AutoImport({
+                dts: './src/@types/auto-imports.d.ts', // 声明文件输出目录
                 resolvers: [ElementPlusResolver()],
             }),
             Components({
+                dts: './src/@types/components.d.ts', // 声明文件输出目录
                 resolvers: [ElementPlusResolver()],
                 dirs: '', // 本地自定义的组件不通过该插件处理，所以将src/components 置位空
             }),
@@ -170,6 +172,7 @@ export default ({ mode }: ConfigEnv) => {
             },
         },
         server: {
+            port: 8080,
             proxy: {
                 '/user/center/api': {
                     target: proxyBase,

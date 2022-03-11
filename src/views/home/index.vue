@@ -67,7 +67,7 @@ const handleEnter = () => {
         </div>
     </div>
 </template>
-<style lang="less">
+<style lang="less" scoped>
 .home {
     height: 100%;
 }

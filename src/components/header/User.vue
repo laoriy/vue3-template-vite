@@ -41,7 +41,7 @@ const logout = async () => {
     </el-dropdown>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .avatar {
     display: flex;
     align-items: center;

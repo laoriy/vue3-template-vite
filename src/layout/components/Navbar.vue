@@ -34,7 +34,7 @@ const toggleSideBar = () => {
     </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 .app-navbar {
     height: @navbarHeight;
     overflow: hidden;
