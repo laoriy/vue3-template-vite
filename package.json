@@ -62,7 +62,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx ls-lint && npx lint-staged",
+      "pre-commit": "npx vue-tsc --noEmit && npx ls-lint && npx lint-staged",
       "commit-msg": "npx commitlint -E HUSKY_GIT_PARAMS"
     }
   },
