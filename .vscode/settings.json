@@ -18,5 +18,13 @@
     "path-autocomplete.pathMappings": {
         "@": "${folder}/src",
        "view": "${folder}/src/view"
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "src/locale",
+        "src/locale/lang"
+    ],
+    "cSpell.words": [
+        "aqara",
+        "popconfirm"
+    ]
 }
