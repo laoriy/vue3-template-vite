@@ -9,7 +9,6 @@ declare module 'vue' {
         ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem'];
         ElButton: typeof import('element-plus/es')['ElButton'];
         ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider'];
-        ElDatePicker: typeof import('element-plus/es')['ElDatePicker'];
         ElDropdown: typeof import('element-plus/es')['ElDropdown'];
         ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem'];
         ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu'];
