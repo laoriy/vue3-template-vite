@@ -3,6 +3,6 @@ declare global {
     interface Window {
         sensors: any;
     }
-  }
+}
 
 export {};
