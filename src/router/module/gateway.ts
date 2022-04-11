@@ -1,6 +1,6 @@
 import { RouteTree } from '../types';
 
-const Layout = () => import('@/layout/index.vue');
+const Layout = () => import('@/layout');
 const Gateway = () => import('@/views/gateway/index.vue');
 
 export default <RouteTree[]>[

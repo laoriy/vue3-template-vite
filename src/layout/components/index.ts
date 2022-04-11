@@ -1,5 +1,6 @@
 import Navbar from './Navbar.vue';
 import AppMain from './AppMain.vue';
-import Sidebar from './sidebar/index.vue';
+import Breadcrumb from './Breadcrumb.vue';
+import Sidebar from './sidebar';
 
-export { Navbar, AppMain, Sidebar };
+export { Navbar, AppMain, Breadcrumb, Sidebar };

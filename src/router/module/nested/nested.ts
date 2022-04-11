@@ -1,6 +1,6 @@
 import { RouteTree } from '../../types';
 
-const Layout = () => import('@/layout/index.vue');
+const Layout = () => import('@/layout');
 const M1 = () => import('@/views/nested/m-1/index.vue');
 const M11 = () => import('@/views/nested/m-1/m-1-1/index.vue');
 const M12 = () => import('@/views/nested/m-1/m-1-2/index.vue');

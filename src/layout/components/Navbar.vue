@@ -4,7 +4,7 @@ import Lang from '@/components/header/Lang.vue';
 import User from '@/components/header/User.vue';
 import { useStore } from '@/store';
 import { ModulesNames, AppModule } from '@/store/mutation-types';
-import Hamburger from './hamburger/index.vue';
+import Hamburger from './Hamburger.vue';
 
 const store = useStore();
 defineProps({

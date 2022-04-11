@@ -2,7 +2,7 @@ import { hasOwn } from 'aqara-lib';
 import { MutationTree, ActionTree } from 'vuex';
 import { StoreLib } from '@/store/types';
 import { SettingsModule } from '@/store/mutation-types';
-import { layout } from '@/settings';
+import { layout } from '@/layout';
 
 const {
     title,

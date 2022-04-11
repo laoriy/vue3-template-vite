@@ -1,6 +1,6 @@
 import { RouteTree } from '../types';
 
-const Layout = () => import('@/layout/index.vue');
+const Layout = () => import('@/layout');
 const Root1 = () => import('@/views/special-level-2/LevelRoot1.vue');
 const Home1 = () => import('@/views/special-level-2/LevelHome1.vue');
 const Add1 = () => import('@/views/special-level-2/LevelAdd1.vue');

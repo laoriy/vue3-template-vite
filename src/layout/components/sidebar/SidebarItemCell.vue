@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SvgIcon from '@/components/svg-icon/index.vue';
+import { SvgIcon } from '@/components/svg-icon';
 
 defineProps({
     icon: {

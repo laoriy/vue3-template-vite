@@ -1,6 +1,6 @@
 import { RouteTree } from '../../types';
 
-const Layout = () => import('@/layout/index.vue');
+const Layout = () => import('@/layout');
 const Button = () => import('@/views/permission-page/ButtonPermission.vue');
 const Module = () => import('@/views/permission-page/ModulePermission.vue');
 

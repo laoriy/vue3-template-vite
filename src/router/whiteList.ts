@@ -1,6 +1,6 @@
 import { RouteTree } from './types';
 
-const Layout = () => import('@/layout/index.vue');
+const Layout = () => import('@/layout');
 const Page403 = () => import('@/views/error-page/403.vue');
 const Page404 = () => import('@/views/error-page/404.vue');
 const Page500 = () => import('@/views/error-page/500.vue');
