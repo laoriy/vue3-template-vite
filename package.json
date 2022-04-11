@@ -65,7 +65,6 @@
     "src/**/*.{js,jsx,vue,ts,tsx}": "eslint --fix"
   },
   "eslintIgnore": [
-    "**/*.d.ts",
     "**/*.md",
     "dist",
     "sensors.js",

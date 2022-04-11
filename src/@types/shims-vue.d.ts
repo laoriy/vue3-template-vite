@@ -9,6 +9,7 @@ declare module '*.vue' {
 declare module '@/assets/css/var.less' {
     export interface Styles {
         menuText: string;
+        mm: string;
         menuBg: string;
         menuActiveText: string;
         sideBarWidth: string | number;
