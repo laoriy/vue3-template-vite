@@ -1,4 +1,4 @@
-import { layout } from '@/settings';
+import { layout } from '../settings';
 
 const title = layout.title || 'Aqara Admin';
 

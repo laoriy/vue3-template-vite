@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useStylesheets } from '@/composables/useStylesheets';
+import { useStylesheets } from '@/hooks/useStylesheets';
 import { useStore } from '@/store';
 import { useRoute } from 'vue-router';
 

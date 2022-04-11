@@ -7,7 +7,7 @@ import {
 } from 'vue-router';
 import { getToken, goUcLogin } from 'uc-lib';
 import store from '@/store';
-import getPageTitle from '@/utils/getPageTitle';
+import getPageTitle from '@/layout/helpers/getPageTitle';
 import { ModulesNames, UserModule, PermissionModule } from '@/store/mutation-types';
 
 // interface Next {

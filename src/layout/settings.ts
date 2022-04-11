@@ -1,6 +1,5 @@
-// layout settings
-export default {
-    title: 'Aqara Admin Temp',
+export const layout = {
+    title: 'Aqara Admin',
 
     /**
      * @type {boolean} true | false
@@ -20,7 +19,7 @@ export default {
      * Invalid when the router whitelist has a path setting of '/'.
      * The default of the 'home path' is the first permission router 'redirect' value.
      */
-    isRedirectToHome: true,
+    isRedirectToHome: false,
 
     /**
      * @type {boolean} true | false

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import useSideBar from '@/layout/useFunctions/useSidebar';
 import { ModulesNames, AppModule } from '@/store/mutation-types';
 import { useStore } from '@/store';
-import Breadcrumb from './components/bread-crumb/index.vue';
-import { Navbar, Sidebar, AppMain } from './components';
-import useResize from './useFunctions/useResize';
+import useSideBar from './hooks/useSidebar';
+import { Breadcrumb, Navbar, Sidebar, AppMain } from './components';
+
+import useResize from './hooks/useResize';
 
 const { device, sidebar, fixedHeader } = useResize();
 const { hideSidebar } = useSideBar();

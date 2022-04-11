@@ -4,7 +4,7 @@ import { isNil } from 'lodash-es';
 import { language } from '@/settings';
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { changeElPlusLanguage } from '@/composables/useLocale';
+import { changeElPlusLanguage } from '@/hooks/useLocale';
 
 const { locale } = useI18n({ useScope: 'global' });
 

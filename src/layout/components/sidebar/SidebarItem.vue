@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // import path from 'path';
-import { isExternal } from '@/utils/validate';
 import { ref } from 'vue';
-import SvgIcon from '@/components/svg-icon/index.vue';
+import { SvgIcon } from '@/components/svg-icon';
+import { isExternal } from '../../helpers/isExternal';
 import ItemCell from './SidebarItemCell.vue';
 import AppLink from './SidebarLink.vue';
 

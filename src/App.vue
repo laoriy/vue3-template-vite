@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { locale } from '@/composables/useLocale';
+import { locale } from '@/hooks/useLocale';
 </script>
 
 <template>
